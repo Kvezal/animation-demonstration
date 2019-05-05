@@ -2,23 +2,23 @@ import { AdRoute } from '../../common/interface/common.interface';
 
 export const TransitionRouteList: AdRoute[] = [
   {
-    name: 'transition-example-property',
-    path: '/transition-example-property',
+    name: 'transition-property',
+    path: '/transition-property',
     component: 'ad-transition-property',
   },
   {
-    name: 'transition-example-duration',
-    path: '/transition-example-duration',
+    name: 'transition-duration',
+    path: '/transition-duration',
     component: 'ad-transition-duration',
   },
   {
-    name: 'transition-example-timing-function',
-    path: '/transition-example-timing-function',
+    name: 'transition-timing-function',
+    path: '/transition-timing-function',
     component: 'ad-transition-timing-function',
   },
   {
-    name: 'transition-example-delay',
-    path: '/transition-example-delay',
+    name: 'transition-delay',
+    path: '/transition-delay',
     component: 'ad-transition-delay',
   },
   {

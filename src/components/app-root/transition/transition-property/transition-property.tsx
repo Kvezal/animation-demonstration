@@ -2,7 +2,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'ad-transition-property',
-  styleUrl: 'transition-example-timing-function.css',
+  styleUrl: 'transition-property.css',
   shadow: true,
 })
 export class AdTransitionProperty {

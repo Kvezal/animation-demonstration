@@ -1,14 +1,14 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'ad-transition-timing-function',
-  styleUrl: 'transition-example-timing-function.css',
+  tag: 'ad-transition-duration',
+  styleUrl: 'transition-duration.css',
   shadow: true,
 })
-export class AdTransitionTimingFunction {
+export class AdTransitionDuration {
   render() {
     return [
-      <div>CSS Transition Timing Function</div>
+      <div>CSS Transition Duration</div>
     ]
   }
 }

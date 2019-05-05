@@ -44,8 +44,8 @@ export namespace Components {
   interface AdTransitionDelay {}
   interface AdTransitionDelayAttributes extends StencilHTMLAttributes {}
 
-  interface AdTransitionTimingFunction {}
-  interface AdTransitionTimingFunctionAttributes extends StencilHTMLAttributes {}
+  interface AdTransitionDuration {}
+  interface AdTransitionDurationAttributes extends StencilHTMLAttributes {}
 
   interface AdTransitionExample {}
   interface AdTransitionExampleAttributes extends StencilHTMLAttributes {}
@@ -53,8 +53,8 @@ export namespace Components {
   interface AdTransitionProperty {}
   interface AdTransitionPropertyAttributes extends StencilHTMLAttributes {}
 
-  interface AdTransitionDuration {}
-  interface AdTransitionDurationAttributes extends StencilHTMLAttributes {}
+  interface AdTransitionTimingFunction {}
+  interface AdTransitionTimingFunctionAttributes extends StencilHTMLAttributes {}
 
   interface AdTransition {}
   interface AdTransitionAttributes extends StencilHTMLAttributes {}
@@ -79,10 +79,10 @@ declare global {
     'AdSettings': Components.AdSettings;
     'AdSvgAnimation': Components.AdSvgAnimation;
     'AdTransitionDelay': Components.AdTransitionDelay;
-    'AdTransitionTimingFunction': Components.AdTransitionTimingFunction;
+    'AdTransitionDuration': Components.AdTransitionDuration;
     'AdTransitionExample': Components.AdTransitionExample;
     'AdTransitionProperty': Components.AdTransitionProperty;
-    'AdTransitionDuration': Components.AdTransitionDuration;
+    'AdTransitionTimingFunction': Components.AdTransitionTimingFunction;
     'AdTransition': Components.AdTransition;
     'AdIconSettings': Components.AdIconSettings;
     'AdSidebar': Components.AdSidebar;
@@ -96,10 +96,10 @@ declare global {
     'ad-settings': Components.AdSettingsAttributes;
     'ad-svg-animation': Components.AdSvgAnimationAttributes;
     'ad-transition-delay': Components.AdTransitionDelayAttributes;
-    'ad-transition-timing-function': Components.AdTransitionTimingFunctionAttributes;
+    'ad-transition-duration': Components.AdTransitionDurationAttributes;
     'ad-transition-example': Components.AdTransitionExampleAttributes;
     'ad-transition-property': Components.AdTransitionPropertyAttributes;
-    'ad-transition-duration': Components.AdTransitionDurationAttributes;
+    'ad-transition-timing-function': Components.AdTransitionTimingFunctionAttributes;
     'ad-transition': Components.AdTransitionAttributes;
     'ad-icon-settings': Components.AdIconSettingsAttributes;
     'ad-sidebar': Components.AdSidebarAttributes;
@@ -148,10 +148,10 @@ declare global {
     new (): HTMLAdTransitionDelayElement;
   };
 
-  interface HTMLAdTransitionTimingFunctionElement extends Components.AdTransitionTimingFunction, HTMLStencilElement {}
-  var HTMLAdTransitionTimingFunctionElement: {
-    prototype: HTMLAdTransitionTimingFunctionElement;
-    new (): HTMLAdTransitionTimingFunctionElement;
+  interface HTMLAdTransitionDurationElement extends Components.AdTransitionDuration, HTMLStencilElement {}
+  var HTMLAdTransitionDurationElement: {
+    prototype: HTMLAdTransitionDurationElement;
+    new (): HTMLAdTransitionDurationElement;
   };
 
   interface HTMLAdTransitionExampleElement extends Components.AdTransitionExample, HTMLStencilElement {}
@@ -166,10 +166,10 @@ declare global {
     new (): HTMLAdTransitionPropertyElement;
   };
 
-  interface HTMLAdTransitionDurationElement extends Components.AdTransitionDuration, HTMLStencilElement {}
-  var HTMLAdTransitionDurationElement: {
-    prototype: HTMLAdTransitionDurationElement;
-    new (): HTMLAdTransitionDurationElement;
+  interface HTMLAdTransitionTimingFunctionElement extends Components.AdTransitionTimingFunction, HTMLStencilElement {}
+  var HTMLAdTransitionTimingFunctionElement: {
+    prototype: HTMLAdTransitionTimingFunctionElement;
+    new (): HTMLAdTransitionTimingFunctionElement;
   };
 
   interface HTMLAdTransitionElement extends Components.AdTransition, HTMLStencilElement {}
@@ -198,10 +198,10 @@ declare global {
     'ad-settings': HTMLAdSettingsElement
     'ad-svg-animation': HTMLAdSvgAnimationElement
     'ad-transition-delay': HTMLAdTransitionDelayElement
-    'ad-transition-timing-function': HTMLAdTransitionTimingFunctionElement
+    'ad-transition-duration': HTMLAdTransitionDurationElement
     'ad-transition-example': HTMLAdTransitionExampleElement
     'ad-transition-property': HTMLAdTransitionPropertyElement
-    'ad-transition-duration': HTMLAdTransitionDurationElement
+    'ad-transition-timing-function': HTMLAdTransitionTimingFunctionElement
     'ad-transition': HTMLAdTransitionElement
     'ad-icon-settings': HTMLAdIconSettingsElement
     'ad-sidebar': HTMLAdSidebarElement
@@ -215,10 +215,10 @@ declare global {
     'ad-settings': HTMLAdSettingsElement;
     'ad-svg-animation': HTMLAdSvgAnimationElement;
     'ad-transition-delay': HTMLAdTransitionDelayElement;
-    'ad-transition-timing-function': HTMLAdTransitionTimingFunctionElement;
+    'ad-transition-duration': HTMLAdTransitionDurationElement;
     'ad-transition-example': HTMLAdTransitionExampleElement;
     'ad-transition-property': HTMLAdTransitionPropertyElement;
-    'ad-transition-duration': HTMLAdTransitionDurationElement;
+    'ad-transition-timing-function': HTMLAdTransitionTimingFunctionElement;
     'ad-transition': HTMLAdTransitionElement;
     'ad-icon-settings': HTMLAdIconSettingsElement;
     'ad-sidebar': HTMLAdSidebarElement;

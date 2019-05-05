@@ -1,0 +1,9 @@
+.ad-root-nav {
+  max-width: 750px;
+  margin-top: 2px;
+  padding-left: 50px;
+}
+
+@import "__item/_ad-root-nav__item";
+@import "__link/_ad-root-nav__link";
+@import "__list/_ad-root-nav__list";

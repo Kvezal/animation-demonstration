@@ -1,0 +1,14 @@
+.ad-root-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 56px;
+
+  color: white;
+
+  background: #5851ff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+@import "__title/_ad-root-header__title";

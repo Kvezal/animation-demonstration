@@ -1,0 +1,13 @@
+.ad-root-nav__link_active {
+  opacity: 1;
+}
+
+.ad-root-nav__link_active:hover,
+.ad-root-nav__link_active:active,
+.ad-root-nav__link_active:focus {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.ad-root-nav__link_active::after {
+  transform: scale(1);
+}

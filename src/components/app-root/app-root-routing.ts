@@ -1,8 +1,12 @@
-export const AppRootRouteList = [
+import { AdRoute } from '../common/interface/common.interface';
+import { TransitionRouteList } from './transition/transition-routing';
+
+export const AppRootRouteList: AdRoute[] = [
   {
     name: 'CSS Переходы',
     path: '/css-transition',
     component: 'ad-transition',
+    children: [...TransitionRouteList],
   },
   {
     name: 'CSS Анимации',
@@ -21,7 +25,7 @@ export const AppRootRouteList = [
   },
 ];
 
-export const AppRootSettingRouteList = [
+export const AppRootSettingRouteList: AdRoute[] = [
   {
     name: 'CSS Переходы',
     path: '/settings',

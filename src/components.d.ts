@@ -12,6 +12,9 @@ import '@stencil/state-tunnel';
 import {
   MatchResults,
 } from '@stencil/router';
+import {
+  AdRoute,
+} from './components/common/interface/common.interface';
 
 
 export namespace Components {
@@ -43,6 +46,13 @@ export namespace Components {
 
   interface AdIconSettings {}
   interface AdIconSettingsAttributes extends StencilHTMLAttributes {}
+
+  interface AdSidebar {
+    'list': AdRoute[];
+  }
+  interface AdSidebarAttributes extends StencilHTMLAttributes {
+    'list'?: AdRoute[];
+  }
 }
 
 declare global {
@@ -55,6 +65,7 @@ declare global {
     'AdSvgAnimation': Components.AdSvgAnimation;
     'AdTransition': Components.AdTransition;
     'AdIconSettings': Components.AdIconSettings;
+    'AdSidebar': Components.AdSidebar;
   }
 
   interface StencilIntrinsicElements {
@@ -66,6 +77,7 @@ declare global {
     'ad-svg-animation': Components.AdSvgAnimationAttributes;
     'ad-transition': Components.AdTransitionAttributes;
     'ad-icon-settings': Components.AdIconSettingsAttributes;
+    'ad-sidebar': Components.AdSidebarAttributes;
   }
 
 
@@ -117,6 +129,12 @@ declare global {
     new (): HTMLAdIconSettingsElement;
   };
 
+  interface HTMLAdSidebarElement extends Components.AdSidebar, HTMLStencilElement {}
+  var HTMLAdSidebarElement: {
+    prototype: HTMLAdSidebarElement;
+    new (): HTMLAdSidebarElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
@@ -126,6 +144,7 @@ declare global {
     'ad-svg-animation': HTMLAdSvgAnimationElement
     'ad-transition': HTMLAdTransitionElement
     'ad-icon-settings': HTMLAdIconSettingsElement
+    'ad-sidebar': HTMLAdSidebarElement
   }
 
   interface ElementTagNameMap {
@@ -137,6 +156,7 @@ declare global {
     'ad-svg-animation': HTMLAdSvgAnimationElement;
     'ad-transition': HTMLAdTransitionElement;
     'ad-icon-settings': HTMLAdIconSettingsElement;
+    'ad-sidebar': HTMLAdSidebarElement;
   }
 
 

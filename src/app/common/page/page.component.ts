@@ -16,11 +16,17 @@ export class PageComponent implements OnInit, OnChanges {
   constructor(private _pageService: PageService) {}
 
   ngOnInit(): void {
-    this.title = this._pageService.title;
-    this.navigationList = this._pageService.navigationList;
+    this.getData();
   }
 
   ngOnChanges(): void {
+    this.getData();
+  }
+
+  /**
+   * Get data from service
+   */
+  getData(): void {
     this.title = this._pageService.title;
     this.navigationList = this._pageService.navigationList;
   }

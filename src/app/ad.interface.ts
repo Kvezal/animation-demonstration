@@ -1,3 +1,5 @@
+import { IRouterLink } from './common/interface/interface';
+
 export const enum RouteList {
   TRANSFORM = 'transform',
   TRANSITION = 'transition',
@@ -13,8 +15,3 @@ export const adRouteLinkList: IRouterLink[] = [
   {path: [RouteList.SVG_ANIMATION], name: 'SVG Animation'},
   {path: [RouteList.JS_ANIMATION], name: 'JS Animation'},
 ];
-
-export interface IRouterLink {
-  path: string[];
-  name: string;
-}

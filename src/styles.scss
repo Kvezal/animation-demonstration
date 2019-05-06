@@ -1,9 +1,28 @@
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   margin: 0px;
   padding: 0px;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji" ,"Segoe UI Emoji" ,"Segoe UI Symbol";
+}
+
+:root {
+  --ad-font-size__large: 24px;
+  --ad-font-size__big: 18px;
+  --ad-font-size__normal: 14px;
+  --ad-font-size__small: 12px;
+
+
+  --ad-color__primary: #5851ff;
+  --ad-color__primary_transparent: rgba(88, 81, 255, .1);
+  --ad-color__primary_active: rgba(88, 81, 255, .2);
+
+  --ad-color__secondary: #ffffff;
+  --ad-color__secondary_inactive: rgba(255, 255, 255, .2);
+  --ad-color__secondary_hiden: rgba(255, 255, 255, 0);
+
+  --ad-color__third: #000000;
+
+  --ad-property__box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  --ad-property__border-color: rgba(0, 0, 0, .2);
+  --ad-property__background-linear-gradient: linear-gradient(90deg, var(--ad-color__primary_transparent) 20%, transparent 20%);
 }

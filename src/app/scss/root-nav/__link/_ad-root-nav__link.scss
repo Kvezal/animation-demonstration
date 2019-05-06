@@ -5,7 +5,7 @@
   height: 35px;
   padding: 0 10px;
 
-  color: white;
+  color: var(--ad-color__secondary);
   line-height: 35px;
   font-weight: 700;
   vertical-align: baseline;
@@ -26,7 +26,7 @@
     width: 100%;
     height: 3px;
 
-    background-color: #ffffff;
+    background-color: var(--ad-color__secondary);
 
     transition-duration: 300ms;
     transform-origin: center bottom;
@@ -37,7 +37,7 @@
   &:active,
   &:focus {
     border-radius: 3px;
-    background-color: rgba(255, 255, 255, .2);
+    background-color: var(--ad-color__secondary_inactive);
     opacity: .85;
   }
 }

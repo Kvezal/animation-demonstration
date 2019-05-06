@@ -1,5 +1,7 @@
 <header class="ad-root-header">
-  <h1 class="ad-root-header__title">Animation</h1>
+  <a class="ad-root-header__title-link" [routerLink]="['']">
+    <h1 class="ad-root-header__title">Animation</h1>
+  </a>
   <nav class="ad-root-nav">
     <ul class="ad-root-nav__list">
       <li class="ad-root-nav__item" *ngFor="let route of routeList">
@@ -14,7 +16,7 @@
   </nav>
 </header>
 
-<main class="ad-root-main">
+<main class="ad-root__main">
   <router-outlet></router-outlet>
 </main>
 

@@ -1,0 +1,7 @@
+.ad-page-nav__link_active {
+  border-bottom: none;
+  border-right-width: 5px;
+  border-right-style: solid;
+  border-right-color: var(--ad-color__primary_active);
+  background-color: var(--ad-color__primary_active);
+}

@@ -5,23 +5,23 @@ import { RouteList } from './ad.interface';
 const routes: Routes = [
   {
     path: RouteList.TRANSFORM,
-    loadChildren: './transform/transform.module#TransformModule',
+    loadChildren: './content/transform/transform.module#TransformModule',
   },
   {
     path: RouteList.TRANSITION,
-    loadChildren: './transition/transition.module#TransitionModule',
+    loadChildren: './content/transition/transition.module#TransitionModule',
   },
   {
     path: RouteList.CSS_ANIMATION,
-    loadChildren: './css-animation/css-animation.module#CssAnimationModule',
+    loadChildren: './content/css-animation/css-animation.module#CssAnimationModule',
   },
   {
     path: RouteList.SVG_ANIMATION,
-    loadChildren: './svg-animation/svg-animation.module#SvgAnimationModule',
+    loadChildren: './content/svg-animation/svg-animation.module#SvgAnimationModule',
   },
   {
     path: RouteList.JS_ANIMATION,
-    loadChildren: './js-animation/js-animation.module#JsAnimationModule',
+    loadChildren: './content/js-animation/js-animation.module#JsAnimationModule',
   },
 ];
 

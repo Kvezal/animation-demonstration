@@ -1,24 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { PageComponent } from './page.component';
-import { PageAsideComponent } from './page-aside/page-aside.component';
-import { PageTitleComponent } from './page-title/page-title.component';
-import { PageContentComponent } from './page-content/page-content.component';
+import { PageService } from './page.service';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [
-    PageComponent,
-    PageAsideComponent,
-    PageTitleComponent,
-    PageContentComponent,
-  ],
-  exports: [
-    PageComponent,
-    PageAsideComponent,
-    PageTitleComponent,
-    PageContentComponent,
-  ],
+  imports: [CommonModule, RouterModule],
+  declarations: [PageComponent],
+  exports: [PageComponent],
+  providers: [PageService],
 })
 export class PageModule {}

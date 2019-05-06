@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-width: 1040px;
+  min-height: 100vh;
+}
+
+@import '__main/_ad-root__main';

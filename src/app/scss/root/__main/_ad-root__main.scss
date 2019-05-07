@@ -1,5 +1,6 @@
 .ad-root__main {
-  flex-grow: 1;
+  position: relative;
 
-  background-image: var(--ad-property__background-linear-gradient);
+  display: flex;
+  flex-grow: 1;
 }

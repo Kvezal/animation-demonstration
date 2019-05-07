@@ -16,8 +16,8 @@
   </nav>
 </header>
 
-<main class="ad-root__main">
-  <router-outlet></router-outlet>
+<main class="ad-root__main" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </main>
 
 

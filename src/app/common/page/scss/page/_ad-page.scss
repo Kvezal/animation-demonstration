@@ -1,5 +1,6 @@
 :host {
   display: flex;
+  flex-grow: 1;
 }
 
 @import "__content/ad-page__content";

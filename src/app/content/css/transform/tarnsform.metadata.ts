@@ -1,4 +1,4 @@
-import { IRouterLink } from '../../common/interface/interface';
+import {IRouterLink} from '../../../common/interface/interface';
 
 export const TransformRouteLinkList: IRouterLink[] = [
   {path: ['translate'], name: 'Перемещение - translate()'},

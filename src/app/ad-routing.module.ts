@@ -2,7 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { RouteList } from './ad.interface';
 
-const routes: Routes = [
+/*const routes: Routes = [
   {
     path: RouteList.TRANSFORM,
     loadChildren: './content/transform/transform.module#TransformModule',
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: RouteList.TRANSITION,
-    loadChildren: './content/transition/transition.module#TransitionModule',
+    loadChildren: './content/css/css.module#CssModule',
     data: { animation: RouteList.TRANSITION },
   },
   {
@@ -28,6 +28,15 @@ const routes: Routes = [
     loadChildren: './content/js-animation/js-animation.module#JsAnimationModule',
     data: { animation: RouteList.JS_ANIMATION },
   },
+];*/
+
+const routes: Routes = [
+  {
+    path: RouteList.CSS,
+    loadChildren: './content/css/css.module#CssModule',
+  },
 ];
+
+
 
 export const AdRoutingModule = RouterModule.forRoot(routes);

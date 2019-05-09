@@ -16,6 +16,10 @@ export class PageNavComponent {
   /** navigation menu of page */
   public navigationList: IRouterLink[] = [
     {
+      path: ['description'],
+      name: 'Описание',
+    },
+    {
       path: ['transform'],
       name: 'Трансформации',
       isShowChildren: false,
@@ -32,16 +36,15 @@ export class PageNavComponent {
       name: 'Переходы',
       isShowChildren: false,
       children: [
-        {path: ['transition', 'property'], name: 'transition-property'},
-        {path: ['transition', 'duration'], name: 'transition-duration'},
-        {path: ['transition', 'timing-function'], name: 'transition-timing-function'},
-        {path: ['transition', 'delay'], name: 'transition-delay'},
+        {path: ['transition', 'property'], name: 'css-property'},
+        {path: ['transition', 'duration'], name: 'css-duration'},
+        {path: ['transition', 'timing-function'], name: 'css-timing-function'},
+        {path: ['transition', 'delay'], name: 'css-delay'},
       ]
     },
-
     {
-      path: ['transition'],
-      name: 'Переходы',
+      path: ['example'],
+      name: 'Примеры',
     }
   ];
 

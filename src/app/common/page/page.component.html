@@ -1,17 +1,6 @@
-<aside class="ad-page-nav">
-  <ul class="ad-page-nav__list">
-    <li
-        class="ad-page-nav__item"
-        *ngFor="let navigationItem of navigationList">
-      <a
-          class="ad-page-nav__link"
-          routerLinkActive="ad-page-nav__link_active"
-          [routerLink]="navigationItem.path">
-        {{ navigationItem.name }}
-      </a>
-    </li>
-  </ul>
-</aside>
+<ad-page-nav class="ad-page-nav">
+
+</ad-page-nav>
 <section class="ad-page__content">
   <h2 class="ad-page__title">{{ title }}</h2>
   <ng-content></ng-content>

@@ -1,9 +1,9 @@
-.ad-page-nav {
-  width: 250px;
-
+:host {
   background-color: var(--ad-color__primary_transparent);
 }
 
+@import "__button/_ad-page-nav__button";
 @import "__item/_ad-page-nav__item";
 @import "__link/_ad-page-nav__link";
 @import "__list/_ad-page-nav__list";
+@import "__wrap/_ad-page-nav__wrap";

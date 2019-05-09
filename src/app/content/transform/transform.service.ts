@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IRouterLink } from '../../common/interface/interface';
-import { TransformRouteLinkList } from './tarnsform.interface';
+import { TransformRouteLinkList } from './tarnsform.metadata';
 
 @Injectable()
 export class TransformService {

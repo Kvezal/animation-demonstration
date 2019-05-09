@@ -1,0 +1,24 @@
+.ad-page-nav__button {
+  position: relative;
+
+  width: 30px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    border-top: 1px solid var(--ad-entity-color__array);
+    border-right: 1px solid var(--ad-entity-color__array);
+
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}

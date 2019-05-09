@@ -1,0 +1,8 @@
+.ad-page-nav__wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:hover {
+    background-color: var(--ad-color__primary_transparent);
+  }
+}

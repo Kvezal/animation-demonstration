@@ -11,6 +11,29 @@ import {
 
 import { RouteList } from './ad.interface';
 
+// export const hide = trigger('routeAnimations', [
+//   transition('* => void', [
+//     query(':leave', [ style({ opacity: 0 }) ], {optional: true}),
+//     query(':enter', [
+//       animate('600ms ease', style({ opacity: 1 }))
+//     ], optional)
+//   ])
+// ]);
+
+export const appearancer = trigger('routeAnimations', [
+  transition(`* <=> *`, appearanceTo())
+]);
+
+function appearanceTo() {
+  const optional = {optional: true};
+  return [
+    query(':enter, :leave', [ style({ opacity: 0 }) ], optional),
+    query(':enter', [
+      animate('600ms ease', style({ opacity: 1 }))
+    ], optional)
+  ];
+}
+
 export const fader = trigger('routeAnimations', [
   transition('* <=> *', [
     query(':enter, :leave', [

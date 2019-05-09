@@ -1,33 +1,33 @@
 import { ChangeDetectionStrategy, Component, OnChanges, OnInit } from '@angular/core';
 import { PageService } from './page.service';
+import {sidebar} from './page.animation';
+import {IRouterLink} from '../interface/interface';
 
 @Component({
   selector: 'ad-page',
   templateUrl: './page.component.html',
-  styleUrls: ['./scss/index.scss'],
+  styleUrls: ['./scss/page/_ad-page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageComponent implements OnInit, OnChanges {
   /** page title */
   public title = '';
-  /** navigation menu of page */
-  public navigationList = [];
 
   constructor(private _pageService: PageService) {}
 
   ngOnInit(): void {
-    this.getData();
+    this._getData();
   }
 
   ngOnChanges(): void {
-    this.getData();
+    this._getData();
   }
 
   /**
    * Get data from service
    */
-  getData(): void {
+  private _getData(): void {
     this.title = this._pageService.title;
-    this.navigationList = this._pageService.navigationList;
+    // this.navigationList = this._pageService.navigationList;
   }
 }

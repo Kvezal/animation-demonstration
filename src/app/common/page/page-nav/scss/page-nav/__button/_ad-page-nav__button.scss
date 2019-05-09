@@ -20,5 +20,8 @@
     border-right: 1px solid var(--ad-entity-color__array);
 
     transform: translate(-50%, -50%) rotate(45deg);
+    transition: transform 300ms ease;
   }
 }
+
+@import '_wrap-open/_ad-page-nav__button_wrap-open';

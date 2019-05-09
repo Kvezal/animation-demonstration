@@ -12,7 +12,11 @@
       class="ad-page-nav__wrap"
       routerLinkActive="ad-page-nav__link_active"
       [routerLinkActiveOptions]="{ exact: navigationItem.isShowChildren }">
-      <button class="ad-page-nav__button" (click)="toggleChildrenDisplay(navigationItem)"></button>
+      <button
+          class="ad-page-nav__button"
+          [class.ad-page-nav__button_wrap-open]="navigationItem.isShowChildren"
+          (click)="toggleChildrenDisplay(navigationItem)">
+      </button>
       <a
         class="ad-page-nav__link ad-page-nav__link_parent"
         [routerLink]="navigationItem.path"

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { IRouterLink } from '../../common/interface/interface';
 
-import { TransformRouteLinkList } from './transform/tarnsform.metadata';
+import {CssRouteLinkList} from './css.metadata';
 
 @Injectable()
 export class CssService {
   public title = 'Transform title';
 
-  public navigationList: IRouterLink[] = TransformRouteLinkList;
+  public navigationList: IRouterLink[] = CssRouteLinkList;
 }

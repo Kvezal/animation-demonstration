@@ -1,4 +1,4 @@
-<!--<ul class="ad-page-nav__list" @sidebarAnimations>
+<ul class="ad-page-nav__list" @sideNavAnimations *ngIf="navigationList">
   <li class="ad-page-nav__item" *ngFor="let navigationItem of navigationList">
     <a
       *ngIf="!navigationItem.children"
@@ -7,54 +7,23 @@
       [routerLink]="navigationItem.path">
       {{ navigationItem.name }}
     </a>
-    <ul class="ad-page-nav__list ad-page-nav__list_parent" *ngIf="navigationItem.children">
-      <li class="ad-page-nav__item">
-        <button class="ad-page-nav__button" (click)="toggleChildrenDisplay(navigationItem)"></button>
-        <a
-          class="ad-page-nav__link ad-page-nav__link_parent"
-          [class.ad-page-nav__link_is-show]="navigationItem.isShowChildren"
-          routerLinkActive="ad-page-nav__link_active"
-          [routerLink]="navigationItem.path"
-          (click)="toggleChildrenDisplay(navigationItem)">
-          {{ navigationItem.name }}
-        </a>
-        <ng-container *ngIf="navigationItem.isShowChildren">
-          <div>
-            <a
-              *ngFor="let child of navigationItem.children"
-              class="ad-page-nav__link ad-page-nav__link_child"
-              routerLinkActive="ad-page-nav__link_active"
-              [routerLink]="child.path">
-              {{ child.name }}
-            </a>
-          </div>
-        </ng-container>
-      </li>
-    </ul>
-  </li>
-</ul>-->
-
-<ul class="ad-page-nav__list" @sidebarAnimations>
-  <li class="ad-page-nav__item" *ngFor="let navigationItem of navigationList">
-    <a
-      *ngIf="!navigationItem.children"
-      class="ad-page-nav__link"
+    <div
+      *ngIf="navigationItem.children"
+      class="ad-page-nav__wrap"
       routerLinkActive="ad-page-nav__link_active"
-      [routerLink]="navigationItem.path">
-      {{ navigationItem.name }}
-    </a>
-    <div class="ad-page-nav__wrap" *ngIf="navigationItem.children">
+      [routerLinkActiveOptions]="{ exact: navigationItem.isShowChildren }">
       <button class="ad-page-nav__button" (click)="toggleChildrenDisplay(navigationItem)"></button>
       <a
         class="ad-page-nav__link ad-page-nav__link_parent"
-        routerLinkActive="ad-page-nav__link_active"
         [routerLink]="navigationItem.path"
         (click)="toggleChildrenDisplay(navigationItem)">
         {{ navigationItem.name }}
       </a>
     </div>
-
-    <ul class="ad-page-nav__list ad-page-nav__list_sub" *ngIf="navigationItem.children">
+    <ul
+        class="ad-page-nav__list ad-page-nav__list_sub"
+        *ngIf="navigationItem.children && navigationItem.isShowChildren"
+        @sideSubNavAnimations>
       <li class="ad-page-nav__item">
         <div *ngIf="navigationItem.isShowChildren">
           <a

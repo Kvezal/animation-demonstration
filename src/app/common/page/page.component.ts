@@ -1,7 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnChanges, OnInit } from '@angular/core';
 import { PageService } from './page.service';
-import {sidebar} from './page.animation';
-import {IRouterLink} from '../interface/interface';
 
 @Component({
   selector: 'ad-page',
@@ -28,6 +26,5 @@ export class PageComponent implements OnInit, OnChanges {
    */
   private _getData(): void {
     this.title = this._pageService.title;
-    // this.navigationList = this._pageService.navigationList;
   }
 }

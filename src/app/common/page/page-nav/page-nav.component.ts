@@ -1,52 +1,21 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 import {IRouterLink} from '../../interface/interface';
-import {sidebar} from '../page.animation';
+import {sideNav, subSideNav} from './page-nav.animations';
+import {PageService} from '../page.service';
 
 @Component({
   selector: 'ad-page-nav',
   templateUrl: './page-nav.component.html',
   styleUrls: ['./scss/page-nav/_ad-page-nav.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    sidebar
-  ]
+  animations: [sideNav, subSideNav],
 })
 export class PageNavComponent {
   /** navigation menu of page */
-  public navigationList: IRouterLink[] = [
-    {
-      path: ['description'],
-      name: 'Описание',
-    },
-    {
-      path: ['transform'],
-      name: 'Трансформации',
-      isShowChildren: false,
-      children: [
-        {path: ['transform', 'translate'], name: 'Перемещение - translate()'},
-        {path: ['transform', 'scale'], name: 'Масштабирование - scale()'},
-        {path: ['transform', 'rotate'], name: 'Вращение - rotate()'},
-        {path: ['transform', 'skew'], name: 'Наклон - skew()'},
-        {path: ['transform', 'origin'], name: 'transform-origin'},
-      ]
-    },
-    {
-      path: ['transition'],
-      name: 'Переходы',
-      isShowChildren: false,
-      children: [
-        {path: ['transition', 'property'], name: 'css-property'},
-        {path: ['transition', 'duration'], name: 'css-duration'},
-        {path: ['transition', 'timing-function'], name: 'css-timing-function'},
-        {path: ['transition', 'delay'], name: 'css-delay'},
-      ]
-    },
-    {
-      path: ['example'],
-      name: 'Примеры',
-    }
-  ];
+  public navigationList: IRouterLink[] = this._pageService.navigationList;
+
+  constructor(private _pageService: PageService) {}
 
   public toggleChildrenDisplay(item: IRouterLink): void {
     item.isShowChildren = !item.isShowChildren;

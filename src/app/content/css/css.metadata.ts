@@ -12,6 +12,7 @@ export const enum TransformRouteList {
   SCALE = 'scale',
   ROTATE = 'rotate',
   SKEW = 'skew',
+  ORIGIN = 'origin',
 }
 
 export const enum TransitionRouteList {
@@ -23,34 +24,34 @@ export const enum TransitionRouteList {
 
 export const CssRouteLinkList: IRouterLink[] = [
   {
-    path: ['description'],
+    path: [CssRouteList.DESCRIPTION],
     name: 'Описание',
   },
   {
-    path: ['transform'],
+    path: [CssRouteList.TRANSFORM],
     name: 'Трансформации',
     isShowChildren: false,
     children: [
-      {path: ['transform', 'translate'], name: 'Перемещение - translate()'},
-      {path: ['transform', 'scale'], name: 'Масштабирование - scale()'},
-      {path: ['transform', 'rotate'], name: 'Вращение - rotate()'},
-      {path: ['transform', 'skew'], name: 'Наклон - skew()'},
-      {path: ['transform', 'origin'], name: 'transform-origin'},
+      {path: [CssRouteList.TRANSFORM, TransformRouteList.TRANSLATE], name: 'Перемещение - translate()'},
+      {path: [CssRouteList.TRANSFORM, TransformRouteList.SCALE], name: 'Масштабирование - scale()'},
+      {path: [CssRouteList.TRANSFORM, TransformRouteList.ROTATE], name: 'Вращение - rotate()'},
+      {path: [CssRouteList.TRANSFORM, TransformRouteList.SKEW], name: 'Наклон - skew()'},
+      {path: [CssRouteList.TRANSFORM, TransformRouteList.ORIGIN], name: 'transform-origin'},
     ]
   },
   {
-    path: ['transition'],
+    path: [CssRouteList.TRANSITION],
     name: 'Переходы',
     isShowChildren: false,
     children: [
-      {path: ['transition', 'property'], name: 'transition-property'},
-      {path: ['transition', 'duration'], name: 'transition-duration'},
-      {path: ['transition', 'timing-function'], name: 'transition-timing-function'},
-      {path: ['transition', 'delay'], name: 'transition-delay'},
+      {path: [CssRouteList.TRANSITION, TransitionRouteList.PROPERTY], name: 'transition-transition-property'},
+      {path: [CssRouteList.TRANSITION, TransitionRouteList.DURATION], name: 'transition-transition-duration'},
+      {path: [CssRouteList.TRANSITION, TransitionRouteList.TIMING_FUNCTION], name: 'transition-timing-function'},
+      {path: [CssRouteList.TRANSITION, TransitionRouteList.DELAY], name: 'transition-delay'},
     ]
   },
   {
-    path: ['example'],
+    path: [CssRouteList.EXAMPLE],
     name: 'Примеры',
   }
 ];

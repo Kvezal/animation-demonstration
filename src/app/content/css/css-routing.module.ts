@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CssComponent } from './css.component';
 import { CssRouteList } from './css.metadata';
+import {CssDescriptionComponent} from './css-description/css-description.component';
+import {CssExampleComponent} from './css-example/css-example.component';
 
 const routes: Routes = [
   {
@@ -10,8 +12,20 @@ const routes: Routes = [
     component: CssComponent,
     children: [
       {
+        path: CssRouteList.DESCRIPTION,
+        component: CssDescriptionComponent,
+      },
+      {
         path: CssRouteList.TRANSFORM,
-        loadChildren: './transform/transform.module#TransformModule',
+        loadChildren: `./${CssRouteList.TRANSFORM}/${CssRouteList.TRANSFORM}.module#TransformModule`,
+      },
+      {
+        path: CssRouteList.TRANSITION,
+        loadChildren: `./${CssRouteList.TRANSITION}/${CssRouteList.TRANSITION}.module#TransitionModule`,
+      },
+      {
+        path: CssRouteList.EXAMPLE,
+        component: CssExampleComponent,
       },
     ],
   },

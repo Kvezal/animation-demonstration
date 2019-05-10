@@ -10,7 +10,8 @@
     <div
       *ngIf="navigationItem.children"
       class="ad-page-nav__wrap"
-      routerLinkActive="ad-page-nav__link_active"
+      [class.ad-page-nav__wrap_close]="!navigationItem.isShowChildren"
+      routerLinkActive="ad-page-nav__wrap_active"
       [routerLinkActiveOptions]="{ exact: navigationItem.isShowChildren }">
       <button
           class="ad-page-nav__button"

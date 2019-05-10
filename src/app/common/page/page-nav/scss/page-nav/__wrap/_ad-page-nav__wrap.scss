@@ -1,8 +1,17 @@
 .ad-page-nav__wrap {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+
+  border-bottom-color: transparent;
+
+  transition-duration: 300ms;
+  transition-delay: 400ms;
 
   &:hover {
     background-color: var(--ad-color__primary_transparent);
   }
 }
+
+@import '_active/_ad-page-nav__wrap_active';
+@import '_close/ad-page-nav__wrap_close';

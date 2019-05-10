@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: `./${CssRouteList.TRANSFORM}/${CssRouteList.TRANSFORM}.module#TransformModule`,
       },
       {
+        path: CssRouteList.ANIMATION,
+        loadChildren: `./${CssRouteList.ANIMATION}/${CssRouteList.ANIMATION}.module#CssAnimationModule`,
+      },
+      {
         path: CssRouteList.TRANSITION,
         loadChildren: `./${CssRouteList.TRANSITION}/${CssRouteList.TRANSITION}.module#TransitionModule`,
       },

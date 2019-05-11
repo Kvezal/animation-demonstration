@@ -34,6 +34,17 @@ const routes: Routes = [
   {
     path: RouteList.CSS,
     loadChildren: './content/css/css.module#CssModule',
+    data: { animation: RouteList.CSS},
+  },
+  {
+    path: RouteList.SVG_ANIMATION,
+    loadChildren: './content/css/css.module#CssModule',
+    data: { animation: RouteList.SVG_ANIMATION},
+  },
+  {
+    path: RouteList.JS_ANIMATION,
+    loadChildren: './content/css/css.module#CssModule',
+    data: { animation: RouteList.JS_ANIMATION},
   },
 ];
 

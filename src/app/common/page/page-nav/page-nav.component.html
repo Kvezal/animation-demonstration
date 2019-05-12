@@ -1,4 +1,4 @@
-<ul class="ad-page-nav__list" @sideNavAnimations *ngIf="navigationList">
+<ul class="ad-page-nav__list" *ngIf="navigationList">
   <li class="ad-page-nav__item" *ngFor="let navigationItem of navigationList">
     <a
       *ngIf="!navigationItem.children"

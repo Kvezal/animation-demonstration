@@ -71,7 +71,7 @@ function toggleRoute(route: string) {
   ];
 }
 
-function showRoute(route: RouteList = RouteList.CSS) {
+function showRoute() {
   const optional = { optional: true };
   return [
     query(

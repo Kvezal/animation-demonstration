@@ -14,14 +14,29 @@ export const adRouteAnimations = trigger('adRouteAnimations', [
 export const adHeaderAnimations = trigger('adHeaderAnimations', [
   transition('void => *', [
     query(':self', [
-      style({ height: 0, overflow: 'hidden' }),
-      animate('300ms ease', style({ height: '*' }))
+      style({
+        height: 0,
+        overflow: 'hidden',
+        opacity: 0,
+      }),
+      animate('300ms ease',
+        style({
+          height: '*',
+          opacity: '*',
+        }))
     ], { optional: true }),
   ]),
   transition('* => void', [
     query(':self', [
-      style({ height: '*', overflow: 'hidden' }),
-      animate('300ms ease', style({ height: 0 }))
+      style({
+        height: '*',
+        overflow: 'hidden',
+        opacity: '*',
+      }),
+      animate('300ms ease', style({
+        height: 0,
+        opacity: 0,
+      }))
     ], { optional: true }),
   ])
 ])

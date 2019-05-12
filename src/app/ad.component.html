@@ -16,12 +16,11 @@
   </nav>
 </header>
 
-<button
-  class="ad-root-closer"
-  [class.ad-root-closer_close]="isHeaderClose"
-  (click)="toggleHeader()"
-></button>
-
 <main class="ad-root__main" [@adRouteAnimations]="prepareRoute(outlet)">
+  <button
+    class="ad-root-closer"
+    [class.ad-root-closer_close]="isHeaderClose"
+    (click)="toggleHeader()"
+  ></button>
   <router-outlet #outlet="outlet"></router-outlet>
 </main>

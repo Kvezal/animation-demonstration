@@ -1,4 +1,4 @@
-<header class="ad-root-header">
+<header class="ad-root-header" *ngIf="!isHeaderClose" @adHeaderAnimations>
   <a class="ad-root-header__title-link" [routerLink]="['']">
     <h1 class="ad-root-header__title">Animation</h1>
   </a>
@@ -16,7 +16,11 @@
   </nav>
 </header>
 
-<button class="ad-root-closer" style="position: absolute"></button>
+<button
+  class="ad-root-closer"
+  [class.ad-root-closer_close]="isHeaderClose"
+  (click)="toggleHeader()"
+></button>
 
 <main class="ad-root__main" [@adRouteAnimations]="prepareRoute(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>

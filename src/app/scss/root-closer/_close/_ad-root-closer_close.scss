@@ -1,34 +1,5 @@
-.ad-root-closer {
-  position: fixed;
-  top: 94px;
-  right: 20px;
-  z-index: 1;
-
-  width: 40px;
-  height: 40px;
-
-  background-color: var(--ad-entity-color__header-closer);
-  border: none;
-  border-radius: 50%;
-  box-shadow: var(--ad-property__box-shadow);
-  
+.ad-root-closer_close {
   &::after {
-    content: '';
-    position: absolute;
-    top: 30%;
-    right: 30%;
-    bottom: 30%;
-    left: 30%;
-
-    display: block;
-    border: 2px solid var(--ad-color__secondary);
-    border-top-color: transparent;
-    border-left-color: transparent;
-    transform:  translateY(-15%) rotate(45deg);
-    transition-duration: 300ms;
-  }
-
-  &:hover::after {
     transform:  translateY(15%) rotate(45deg) scale(-1);
   }
 }

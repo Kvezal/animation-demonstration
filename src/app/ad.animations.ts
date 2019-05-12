@@ -11,6 +11,21 @@ export const adRouteAnimations = trigger('adRouteAnimations', [
   transition(`* => ${RouteList.CSS}, * => ${RouteList.SVG_ANIMATION}, * => ${RouteList.JS_ANIMATION}`, showRoute()),
 ]);
 
+export const adHeaderAnimations = trigger('adHeaderAnimations', [
+  transition('void => *', [
+    query(':self', [
+      style({ height: 0, overflow: 'hidden' }),
+      animate('300ms ease', style({ height: '*' }))
+    ], { optional: true }),
+  ]),
+  transition('* => void', [
+    query(':self', [
+      style({ height: '*', overflow: 'hidden' }),
+      animate('300ms ease', style({ height: 0 }))
+    ], { optional: true }),
+  ])
+])
+
 function toggleRoute(route: string) {
   const optional = { optional: true };
   const adRouteTransformOrigin = {
@@ -57,13 +72,13 @@ function toggleRoute(route: string) {
           transformOrigin: adRouteTransformOrigin[route].showing,
           transform: 'scale(0)',
         }),
-        animate('300ms ease', style({ transform: 'scale(1)' }))
+        animate('500ms ease', style({ transform: 'scale(1)' }))
       ]),
       query(':leave', [
         style({
           transformOrigin: adRouteTransformOrigin[route].hidden,
         }),
-        animate('300ms ease', style({
+        animate('500ms ease', style({
           transform: 'scale(0)',
         }))
       ])
@@ -78,9 +93,11 @@ function showRoute() {
       ':enter',
       [
         style({ opacity: 0 }),
-        animate('2000ms ease', style({ opacity: 1 }))
+        animate('1s ease', style({ opacity: 1 }))
       ],
       optional
     ),
   ];
 }
+
+

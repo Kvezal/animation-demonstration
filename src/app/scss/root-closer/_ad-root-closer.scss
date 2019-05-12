@@ -1,0 +1,14 @@
+.ad-root-closer {
+  position: fixed;
+  top: 94px;
+  right: 20px;
+  z-index: 1;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--ad-entity-color__header-closer);
+  border: none;
+  border-radius: 50%;
+  box-shadow: var(--ad-property__box-shadow);
+}

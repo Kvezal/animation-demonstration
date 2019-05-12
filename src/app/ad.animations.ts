@@ -57,13 +57,13 @@ function toggleRoute(route: string) {
           transformOrigin: adRouteTransformOrigin[route].showing,
           transform: 'scale(0)',
         }),
-        animate('2s ease', style({ transform: 'scale(1)' }))
+        animate('300ms ease', style({ transform: 'scale(1)' }))
       ]),
       query(':leave', [
         style({
           transformOrigin: adRouteTransformOrigin[route].hidden,
         }),
-        animate('2s ease', style({
+        animate('300ms ease', style({
           transform: 'scale(0)',
         }))
       ])

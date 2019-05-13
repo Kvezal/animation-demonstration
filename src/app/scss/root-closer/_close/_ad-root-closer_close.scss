@@ -1,0 +1,5 @@
+.ad-root-closer_close {
+  &::after {
+    transform:  translateY(15%) rotate(225deg);
+  }
+}
